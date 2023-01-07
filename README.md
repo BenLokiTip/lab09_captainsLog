@@ -28,7 +28,9 @@ i.e.
 
 #### How to initialize/run your application (where applicable)
 
-npm install
+* npm install
+
+_If furthering development: Windows users may have to restart the postgres database with the following command: pg_ctl -D /home/linuxbrew/.linuxbrew/var/postgres start_ 
 
 #### How to use your library (where applicable)
 
