@@ -1,5 +1,5 @@
 const { Sequelize } = require('sequelize');
-
+const { makeCaptain } = require('./captain.model');
 const { makeAuthUser } = require('../auth/models/users-model');
 
 
@@ -23,9 +23,10 @@ const CONNECTION_OPTIONS =
 const sequelize = new Sequelize(DATABASE_URL, CONNECTION_OPTIONS);
 
 const AuthUser = makeAuthUser(sequelize);
-
+const Captain = makeCaptain(sequelize);
 
 module.exports = {
   sequelize,
   AuthUser,
+  Captain,
 };

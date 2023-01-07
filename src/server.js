@@ -4,12 +4,13 @@ const { notFound } = require('./middleware/404');
 const { serverError } = require('./middleware/500');
 
 const { checkToken, authRoutes } = require('./auth/router');
-
+const { captainRoutes } = require('./routes/captains');
 const server = express();
 
 server.use(express.json());
 
 server.use(authRoutes);
+server.use(captainRoutes);
 
 server.get('/loggedin', checkToken, (req, res) => {
   res.status(200).send('You are logged in, ' + req.username);
@@ -18,6 +19,4 @@ server.get('/loggedin', checkToken, (req, res) => {
 server.use(notFound);
 server.use(serverError);
 
-module.exports = {
-  server,
-};
+module.exports = {server};
