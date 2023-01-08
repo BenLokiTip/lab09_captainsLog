@@ -64,7 +64,7 @@ async function createCaptain(req, res, next) {
   const captain = await Captain.create({
     name,
     firstOfficer,
-    ship,
+    ship
   });
 
   res.json(captain);
@@ -73,7 +73,7 @@ async function createCaptain(req, res, next) {
 async function updateCaptain(req, res, next) {
   const id = req.params.id;
   let captain = await Captain.findOne({ where: { id: id } });
-  if (captain == null) {
+  if (captain === null) {
     next();
   } else {
     const name = req.body.name ?? captain.name;
@@ -85,7 +85,7 @@ async function updateCaptain(req, res, next) {
       ship,
     };
 
-    captain = await Captain.update(updatedCaptain);
+    captain = await captain.update(updatedCaptain);
 
     res.json(captain);
   }

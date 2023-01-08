@@ -10,12 +10,7 @@
   GitHub: required 1 additional teammate approval;
   GitHub: required status checks to pass before merging
 
-- [back-end server url](http://xyz.com)  --add render link here
-
-- [Reading Notes ## -Topic (Ezgi)](https://vida-1.github.io/reading-notes/read##_401.html)
-- [Reading Notes ## -Topic (Vida)](https://vida-1.github.io/reading-notes/read##_401.html)
- 
- - Attribution: database implementation based on can-of-books (301) collaborative implementation
+- [back-end server url](https://lab09-captainslog-y6u5.onrender.com)  
 
 ### Setup
 
@@ -23,14 +18,15 @@
 
 i.e.
 
-- `PORT` - Port Number
-- `DATABASE_URL` - URL to the running Postgres instance/db
+- `PORT` - 3000
+- `DATABASE_URL` - postgres://localhost:5432/postgres
+- `TOKEN_SECRET` - 
 
 #### How to initialize/run your application (where applicable)
 
-* npm install
+- npm install
 
-_If furthering development: Windows users may have to restart the postgres database with the following command: pg_ctl -D /home/linuxbrew/.linuxbrew/var/postgres start_ 
+_If furthering development: Windows users may have to restart the postgres database with the following command: pg_ctl -D /home/linuxbrew/.linuxbrew/var/postgres start_
 
 #### How to use your library (where applicable)
 
