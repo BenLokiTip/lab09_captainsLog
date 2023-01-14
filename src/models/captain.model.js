@@ -8,5 +8,5 @@ function makeCaptain(sequelize) {
     // shipImg: DataTypes.STRING,  --add back in after fully functional
   });
 }
-  
+
 module.exports = { makeCaptain };

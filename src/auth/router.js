@@ -42,7 +42,7 @@ async function signin(req, res, next) {
     if (user) {
       const data = { username: user.username, role: user.role };
       const token = jwt.sign(data, TOKEN_SECRET);
-      res.send(token);
+      res.send({ token });
     } else {
       next(new Error('Invalid login'));
     }

@@ -19,8 +19,16 @@ captainRoutes.get(
   ensureRole(['reader', 'writer', 'editor', 'admin']),
   getCaptain
 ); // Retrieve One
-captainRoutes.post('/captain', ensureRole(['writer', 'editor', 'admin']), createCaptain); // Create
-captainRoutes.put('/captain/:id', ensureRole(['editor', 'admin']), updateCaptain); // Update
+captainRoutes.post(
+  '/captain',
+  ensureRole(['writer', 'editor', 'admin']),
+  createCaptain
+); // Create
+captainRoutes.put(
+  '/captain/:id',
+  ensureRole(['editor', 'admin']),
+  updateCaptain
+); // Update
 captainRoutes.delete('/captain/:id', ensureRole(['admin']), deleteCaptain); // Delete
 
 async function getCaptains(req, res, next) {
@@ -64,7 +72,7 @@ async function createCaptain(req, res, next) {
   const captain = await Captain.create({
     name,
     firstOfficer,
-    ship
+    ship,
   });
 
   res.json(captain);
