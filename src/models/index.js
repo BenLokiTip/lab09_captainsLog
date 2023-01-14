@@ -2,7 +2,6 @@ const { Sequelize } = require('sequelize');
 const { makeCaptain } = require('./captain.model');
 const { makeAuthUser } = require('../auth/models/users-model');
 
-
 const DATABASE_URL =
   process.env.NODE_ENV === 'test'
     ? 'sqlite::memory:'
